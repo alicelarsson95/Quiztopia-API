@@ -1,0 +1,120 @@
+org: js2024
+service: quiztopia-api
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: eu-north-1
+  environment:
+    USERS_TABLE: users
+    QUIZ_TABLE: quiz
+    QUESTIONS_TABLE: questions
+    JWT_SECRET: 123ABC
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:GetItem
+            - dynamodb:PutItem
+            - dynamodb:UpdateItem
+            - dynamodb:DeleteItem
+            - dynamodb:Query
+          Resource:
+            - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/users
+            - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/quiz
+            - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/questions
+
+functions:
+  signup:
+    handler: src/handlers/auth/signup.handler
+    events:
+      - httpApi:
+          method: POST
+          path: /auth/signup
+
+  login:
+    handler: src/handlers/auth/login.handler
+    events:
+      - httpApi:
+          method: POST
+          path: /auth/login
+
+  getAllQuizzes:
+    handler: src/handlers/quiz/getAllQuiz.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /quiz
+
+  createQuiz:
+    handler: src/handlers/quiz/createQuiz.handler
+    events:
+      - httpApi:
+          method: POST
+          path: /quiz
+
+  addQuestion:
+    handler: src/handlers/quiz/addQuestion.handler
+    events:
+      - httpApi:
+          method: POST
+          path: /quiz/question
+
+  getByUser:
+    handler: src/handlers/quiz/getByUser.handler
+    events:
+      - httpApi:
+          method: GET
+          path: /quiz/{userId}/{quizId}
+
+  deleteQuiz:
+    handler: src/handlers/quiz/deleteQuiz.handler
+    events:
+      - httpApi:
+          method: DELETE
+          path: /quiz/{quizId}
+
+plugins:
+  - serverless-offline
+
+resources:
+  Resources:
+    UsersTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: users
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: username
+            AttributeType: S
+        KeySchema:
+          - AttributeName: username
+            KeyType: HASH
+
+    QuizTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: quiz
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: quizId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: quizId
+            KeyType: HASH
+
+    QuestionsTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: questions
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: quizId
+            AttributeType: S
+          - AttributeName: questionId
+            AttributeType: S
+        KeySchema:
+          - AttributeName: quizId
+            KeyType: HASH
+          - AttributeName: questionId
+            KeyType: RANGE

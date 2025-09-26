@@ -1,0 +1,16 @@
+{
+  "name": "quiztopia-api",
+  "version": "1.0.0",
+  "type": "module",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.637.0",
+    "@middy/core": "^5.4.4",
+    "@middy/http-json-body-parser": "^5.4.4",
+    "@middy/validator": "^5.4.4",
+    "bcryptjs": "^3.0.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "serverless-offline": "^14.4.0"
+  }
+}
