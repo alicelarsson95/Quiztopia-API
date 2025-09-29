@@ -183,7 +183,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                  "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                  "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
                 },
                 "Handler": "src/handlers/auth/signup.handler",
                 "Runtime": "nodejs18.x",
@@ -214,7 +214,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                  "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                  "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
                 },
                 "Handler": "src/handlers/auth/login.handler",
                 "Runtime": "nodejs18.x",
@@ -245,7 +245,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                  "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                  "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
                 },
                 "Handler": "src/handlers/quiz/getAllQuiz.handler",
                 "Runtime": "nodejs18.x",
@@ -276,7 +276,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                  "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                  "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
                 },
                 "Handler": "src/handlers/quiz/createQuiz.handler",
                 "Runtime": "nodejs18.x",
@@ -307,7 +307,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                  "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                  "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
                 },
                 "Handler": "src/handlers/quiz/addQuestion.handler",
                 "Runtime": "nodejs18.x",
@@ -338,7 +338,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                  "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                  "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
                 },
                 "Handler": "src/handlers/quiz/getByUser.handler",
                 "Runtime": "nodejs18.x",
@@ -369,7 +369,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                  "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                  "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
                 },
                 "Handler": "src/handlers/quiz/deleteQuiz.handler",
                 "Runtime": "nodejs18.x",
@@ -395,74 +395,74 @@
                 "DeleteQuizLogGroup"
               ]
             },
-            "SignupLambdaVersionkmquGyU8A1frpd7dorQvGXlnrVLB9sR6KEGCveTIc": {
+            "SignupLambdaVersionI15SUH4otpgJZJyi7FxfpwWiMcgAPkPkwdAkghaPQ": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "SignupLambdaFunction"
                 },
-                "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+                "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
               }
             },
-            "LoginLambdaVersionmETxo0Tn3zJcDfNykEWTfIVPwQzUO64YxzzH24nQ39I": {
+            "LoginLambdaVersionFUPyON267Xc0Bb7XpUbC7IbmS9R1ZCQXM0ECAdQZMmo": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "LoginLambdaFunction"
                 },
-                "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+                "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
               }
             },
-            "GetAllQuizzesLambdaVersionvX04i9MWiLUWDJFly25A5oE7aEMkUoNKB9BbzaVIlc": {
+            "GetAllQuizzesLambdaVersionilm1unv2rMHdJ85fguEKAtY9ND7ilUxsoeaFcyVGs": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "GetAllQuizzesLambdaFunction"
                 },
-                "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+                "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
               }
             },
-            "CreateQuizLambdaVersionYsFh0xswKSeI9TLSVmpvfn83laYfVVMjUOhx0gX71A": {
+            "CreateQuizLambdaVersionW6wqH3l6lZcOIU7GVKxyhmnSdJK3S6BEiPGf8WA4k": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "CreateQuizLambdaFunction"
                 },
-                "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+                "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
               }
             },
-            "AddQuestionLambdaVersion8q4ohJpTB8ngst1DsVw9bqaZGPFGiH4kp2IAcJDkQQM": {
+            "AddQuestionLambdaVersionIMOlG4JpRg2SSvNNLdGraB0fTQyvYxsmnFG42I1OhY": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "AddQuestionLambdaFunction"
                 },
-                "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+                "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
               }
             },
-            "GetByUserLambdaVersion9I6rlRZM23PtxBONxMBvwaGcNsEmMWC5SA7oMYDbc": {
+            "GetByUserLambdaVersionehMImMwByFOSeh8daJxRWvTLyy0g4NTamN5sl2cbm4": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "GetByUserLambdaFunction"
                 },
-                "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+                "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
               }
             },
-            "DeleteQuizLambdaVersiono4QEesD7zsAEf69bBhxXZb8iEANyegICfJ70cITTtk": {
+            "DeleteQuizLambdaVersionSAokATFYHOgsfbXj0roZKcR4TKc2ymshU6hpprru0": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "DeleteQuizLambdaFunction"
                 },
-                "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+                "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
               }
             },
             "HttpApi": {
@@ -1086,7 +1086,7 @@
             "SignupLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "SignupLambdaVersionkmquGyU8A1frpd7dorQvGXlnrVLB9sR6KEGCveTIc"
+                "Ref": "SignupLambdaVersionI15SUH4otpgJZJyi7FxfpwWiMcgAPkPkwdAkghaPQ"
               },
               "Export": {
                 "Name": "sls-quiztopia-api-dev-SignupLambdaFunctionQualifiedArn"
@@ -1095,7 +1095,7 @@
             "LoginLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "LoginLambdaVersionmETxo0Tn3zJcDfNykEWTfIVPwQzUO64YxzzH24nQ39I"
+                "Ref": "LoginLambdaVersionFUPyON267Xc0Bb7XpUbC7IbmS9R1ZCQXM0ECAdQZMmo"
               },
               "Export": {
                 "Name": "sls-quiztopia-api-dev-LoginLambdaFunctionQualifiedArn"
@@ -1104,7 +1104,7 @@
             "GetAllQuizzesLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "GetAllQuizzesLambdaVersionvX04i9MWiLUWDJFly25A5oE7aEMkUoNKB9BbzaVIlc"
+                "Ref": "GetAllQuizzesLambdaVersionilm1unv2rMHdJ85fguEKAtY9ND7ilUxsoeaFcyVGs"
               },
               "Export": {
                 "Name": "sls-quiztopia-api-dev-GetAllQuizzesLambdaFunctionQualifiedArn"
@@ -1113,7 +1113,7 @@
             "CreateQuizLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "CreateQuizLambdaVersionYsFh0xswKSeI9TLSVmpvfn83laYfVVMjUOhx0gX71A"
+                "Ref": "CreateQuizLambdaVersionW6wqH3l6lZcOIU7GVKxyhmnSdJK3S6BEiPGf8WA4k"
               },
               "Export": {
                 "Name": "sls-quiztopia-api-dev-CreateQuizLambdaFunctionQualifiedArn"
@@ -1122,7 +1122,7 @@
             "AddQuestionLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "AddQuestionLambdaVersion8q4ohJpTB8ngst1DsVw9bqaZGPFGiH4kp2IAcJDkQQM"
+                "Ref": "AddQuestionLambdaVersionIMOlG4JpRg2SSvNNLdGraB0fTQyvYxsmnFG42I1OhY"
               },
               "Export": {
                 "Name": "sls-quiztopia-api-dev-AddQuestionLambdaFunctionQualifiedArn"
@@ -1131,7 +1131,7 @@
             "GetByUserLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "GetByUserLambdaVersion9I6rlRZM23PtxBONxMBvwaGcNsEmMWC5SA7oMYDbc"
+                "Ref": "GetByUserLambdaVersionehMImMwByFOSeh8daJxRWvTLyy0g4NTamN5sl2cbm4"
               },
               "Export": {
                 "Name": "sls-quiztopia-api-dev-GetByUserLambdaFunctionQualifiedArn"
@@ -1140,7 +1140,7 @@
             "DeleteQuizLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "DeleteQuizLambdaVersiono4QEesD7zsAEf69bBhxXZb8iEANyegICfJ70cITTtk"
+                "Ref": "DeleteQuizLambdaVersionSAokATFYHOgsfbXj0roZKcR4TKc2ymshU6hpprru0"
               },
               "Export": {
                 "Name": "sls-quiztopia-api-dev-DeleteQuizLambdaFunctionQualifiedArn"
@@ -1203,7 +1203,7 @@
           "timeout": 6,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "SignupLambdaVersionkmquGyU8A1frpd7dorQvGXlnrVLB9sR6KEGCveTIc"
+          "versionLogicalId": "SignupLambdaVersionI15SUH4otpgJZJyi7FxfpwWiMcgAPkPkwdAkghaPQ"
         },
         "login": {
           "handler": "src/handlers/auth/login.handler",
@@ -1223,7 +1223,7 @@
           "timeout": 6,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "LoginLambdaVersionmETxo0Tn3zJcDfNykEWTfIVPwQzUO64YxzzH24nQ39I"
+          "versionLogicalId": "LoginLambdaVersionFUPyON267Xc0Bb7XpUbC7IbmS9R1ZCQXM0ECAdQZMmo"
         },
         "getAllQuizzes": {
           "handler": "src/handlers/quiz/getAllQuiz.handler",
@@ -1243,7 +1243,7 @@
           "timeout": 6,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "GetAllQuizzesLambdaVersionvX04i9MWiLUWDJFly25A5oE7aEMkUoNKB9BbzaVIlc"
+          "versionLogicalId": "GetAllQuizzesLambdaVersionilm1unv2rMHdJ85fguEKAtY9ND7ilUxsoeaFcyVGs"
         },
         "createQuiz": {
           "handler": "src/handlers/quiz/createQuiz.handler",
@@ -1263,7 +1263,7 @@
           "timeout": 6,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "CreateQuizLambdaVersionYsFh0xswKSeI9TLSVmpvfn83laYfVVMjUOhx0gX71A"
+          "versionLogicalId": "CreateQuizLambdaVersionW6wqH3l6lZcOIU7GVKxyhmnSdJK3S6BEiPGf8WA4k"
         },
         "addQuestion": {
           "handler": "src/handlers/quiz/addQuestion.handler",
@@ -1283,7 +1283,7 @@
           "timeout": 6,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "AddQuestionLambdaVersion8q4ohJpTB8ngst1DsVw9bqaZGPFGiH4kp2IAcJDkQQM"
+          "versionLogicalId": "AddQuestionLambdaVersionIMOlG4JpRg2SSvNNLdGraB0fTQyvYxsmnFG42I1OhY"
         },
         "getByUser": {
           "handler": "src/handlers/quiz/getByUser.handler",
@@ -1303,7 +1303,7 @@
           "timeout": 6,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "GetByUserLambdaVersion9I6rlRZM23PtxBONxMBvwaGcNsEmMWC5SA7oMYDbc"
+          "versionLogicalId": "GetByUserLambdaVersionehMImMwByFOSeh8daJxRWvTLyy0g4NTamN5sl2cbm4"
         },
         "deleteQuiz": {
           "handler": "src/handlers/quiz/deleteQuiz.handler",
@@ -1323,7 +1323,7 @@
           "timeout": 6,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "DeleteQuizLambdaVersiono4QEesD7zsAEf69bBhxXZb8iEANyegICfJ70cITTtk"
+          "versionLogicalId": "DeleteQuizLambdaVersionSAokATFYHOgsfbXj0roZKcR4TKc2ymshU6hpprru0"
         }
       },
       "plugins": [
@@ -1577,7 +1577,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
               },
               "Handler": "src/handlers/auth/signup.handler",
               "Runtime": "nodejs18.x",
@@ -1608,7 +1608,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
               },
               "Handler": "src/handlers/auth/login.handler",
               "Runtime": "nodejs18.x",
@@ -1639,7 +1639,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
               },
               "Handler": "src/handlers/quiz/getAllQuiz.handler",
               "Runtime": "nodejs18.x",
@@ -1670,7 +1670,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
               },
               "Handler": "src/handlers/quiz/createQuiz.handler",
               "Runtime": "nodejs18.x",
@@ -1701,7 +1701,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
               },
               "Handler": "src/handlers/quiz/addQuestion.handler",
               "Runtime": "nodejs18.x",
@@ -1732,7 +1732,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
               },
               "Handler": "src/handlers/quiz/getByUser.handler",
               "Runtime": "nodejs18.x",
@@ -1763,7 +1763,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-                "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+                "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
               },
               "Handler": "src/handlers/quiz/deleteQuiz.handler",
               "Runtime": "nodejs18.x",
@@ -1789,74 +1789,74 @@
               "DeleteQuizLogGroup"
             ]
           },
-          "SignupLambdaVersionkmquGyU8A1frpd7dorQvGXlnrVLB9sR6KEGCveTIc": {
+          "SignupLambdaVersionI15SUH4otpgJZJyi7FxfpwWiMcgAPkPkwdAkghaPQ": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "SignupLambdaFunction"
               },
-              "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+              "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
             }
           },
-          "LoginLambdaVersionmETxo0Tn3zJcDfNykEWTfIVPwQzUO64YxzzH24nQ39I": {
+          "LoginLambdaVersionFUPyON267Xc0Bb7XpUbC7IbmS9R1ZCQXM0ECAdQZMmo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "LoginLambdaFunction"
               },
-              "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+              "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
             }
           },
-          "GetAllQuizzesLambdaVersionvX04i9MWiLUWDJFly25A5oE7aEMkUoNKB9BbzaVIlc": {
+          "GetAllQuizzesLambdaVersionilm1unv2rMHdJ85fguEKAtY9ND7ilUxsoeaFcyVGs": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetAllQuizzesLambdaFunction"
               },
-              "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+              "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
             }
           },
-          "CreateQuizLambdaVersionYsFh0xswKSeI9TLSVmpvfn83laYfVVMjUOhx0gX71A": {
+          "CreateQuizLambdaVersionW6wqH3l6lZcOIU7GVKxyhmnSdJK3S6BEiPGf8WA4k": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "CreateQuizLambdaFunction"
               },
-              "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+              "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
             }
           },
-          "AddQuestionLambdaVersion8q4ohJpTB8ngst1DsVw9bqaZGPFGiH4kp2IAcJDkQQM": {
+          "AddQuestionLambdaVersionIMOlG4JpRg2SSvNNLdGraB0fTQyvYxsmnFG42I1OhY": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "AddQuestionLambdaFunction"
               },
-              "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+              "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
             }
           },
-          "GetByUserLambdaVersion9I6rlRZM23PtxBONxMBvwaGcNsEmMWC5SA7oMYDbc": {
+          "GetByUserLambdaVersionehMImMwByFOSeh8daJxRWvTLyy0g4NTamN5sl2cbm4": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "GetByUserLambdaFunction"
               },
-              "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+              "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
             }
           },
-          "DeleteQuizLambdaVersiono4QEesD7zsAEf69bBhxXZb8iEANyegICfJ70cITTtk": {
+          "DeleteQuizLambdaVersionSAokATFYHOgsfbXj0roZKcR4TKc2ymshU6hpprru0": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "DeleteQuizLambdaFunction"
               },
-              "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+              "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
             }
           },
           "HttpApi": {
@@ -2480,7 +2480,7 @@
           "SignupLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "SignupLambdaVersionkmquGyU8A1frpd7dorQvGXlnrVLB9sR6KEGCveTIc"
+              "Ref": "SignupLambdaVersionI15SUH4otpgJZJyi7FxfpwWiMcgAPkPkwdAkghaPQ"
             },
             "Export": {
               "Name": "sls-quiztopia-api-dev-SignupLambdaFunctionQualifiedArn"
@@ -2489,7 +2489,7 @@
           "LoginLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "LoginLambdaVersionmETxo0Tn3zJcDfNykEWTfIVPwQzUO64YxzzH24nQ39I"
+              "Ref": "LoginLambdaVersionFUPyON267Xc0Bb7XpUbC7IbmS9R1ZCQXM0ECAdQZMmo"
             },
             "Export": {
               "Name": "sls-quiztopia-api-dev-LoginLambdaFunctionQualifiedArn"
@@ -2498,7 +2498,7 @@
           "GetAllQuizzesLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetAllQuizzesLambdaVersionvX04i9MWiLUWDJFly25A5oE7aEMkUoNKB9BbzaVIlc"
+              "Ref": "GetAllQuizzesLambdaVersionilm1unv2rMHdJ85fguEKAtY9ND7ilUxsoeaFcyVGs"
             },
             "Export": {
               "Name": "sls-quiztopia-api-dev-GetAllQuizzesLambdaFunctionQualifiedArn"
@@ -2507,7 +2507,7 @@
           "CreateQuizLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "CreateQuizLambdaVersionYsFh0xswKSeI9TLSVmpvfn83laYfVVMjUOhx0gX71A"
+              "Ref": "CreateQuizLambdaVersionW6wqH3l6lZcOIU7GVKxyhmnSdJK3S6BEiPGf8WA4k"
             },
             "Export": {
               "Name": "sls-quiztopia-api-dev-CreateQuizLambdaFunctionQualifiedArn"
@@ -2516,7 +2516,7 @@
           "AddQuestionLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "AddQuestionLambdaVersion8q4ohJpTB8ngst1DsVw9bqaZGPFGiH4kp2IAcJDkQQM"
+              "Ref": "AddQuestionLambdaVersionIMOlG4JpRg2SSvNNLdGraB0fTQyvYxsmnFG42I1OhY"
             },
             "Export": {
               "Name": "sls-quiztopia-api-dev-AddQuestionLambdaFunctionQualifiedArn"
@@ -2525,7 +2525,7 @@
           "GetByUserLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "GetByUserLambdaVersion9I6rlRZM23PtxBONxMBvwaGcNsEmMWC5SA7oMYDbc"
+              "Ref": "GetByUserLambdaVersionehMImMwByFOSeh8daJxRWvTLyy0g4NTamN5sl2cbm4"
             },
             "Export": {
               "Name": "sls-quiztopia-api-dev-GetByUserLambdaFunctionQualifiedArn"
@@ -2534,7 +2534,7 @@
           "DeleteQuizLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "DeleteQuizLambdaVersiono4QEesD7zsAEf69bBhxXZb8iEANyegICfJ70cITTtk"
+              "Ref": "DeleteQuizLambdaVersionSAokATFYHOgsfbXj0roZKcR4TKc2ymshU6hpprru0"
             },
             "Export": {
               "Name": "sls-quiztopia-api-dev-DeleteQuizLambdaFunctionQualifiedArn"
@@ -2600,42 +2600,42 @@
     "serviceProviderAwsCfStackName": "quiztopia-api-dev",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:eu-north-1:797622875139:stack/quiztopia-api-dev/77a52320-9ab3-11f0-8feb-0ea2af258faf",
     "serviceProviderAwsCfStackCreated": "2025-09-26T08:33:24.660Z",
-    "serviceProviderAwsCfStackUpdated": "2025-09-29T07:41:50.940Z",
+    "serviceProviderAwsCfStackUpdated": "2025-09-29T08:25:09.446Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "DeleteQuizLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-deleteQuiz:14",
+        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-deleteQuiz:16",
         "Description": "Current Lambda function version",
         "ExportName": "sls-quiztopia-api-dev-DeleteQuizLambdaFunctionQualifiedArn"
       },
       {
         "OutputKey": "GetAllQuizzesLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-getAllQuizzes:14",
+        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-getAllQuizzes:16",
         "Description": "Current Lambda function version",
         "ExportName": "sls-quiztopia-api-dev-GetAllQuizzesLambdaFunctionQualifiedArn"
       },
       {
         "OutputKey": "CreateQuizLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-createQuiz:14",
+        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-createQuiz:16",
         "Description": "Current Lambda function version",
         "ExportName": "sls-quiztopia-api-dev-CreateQuizLambdaFunctionQualifiedArn"
       },
       {
         "OutputKey": "GetByUserLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-getByUser:14",
+        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-getByUser:16",
         "Description": "Current Lambda function version",
         "ExportName": "sls-quiztopia-api-dev-GetByUserLambdaFunctionQualifiedArn"
       },
       {
         "OutputKey": "SignupLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-signup:16",
+        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-signup:18",
         "Description": "Current Lambda function version",
         "ExportName": "sls-quiztopia-api-dev-SignupLambdaFunctionQualifiedArn"
       },
       {
         "OutputKey": "AddQuestionLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-addQuestion:14",
+        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-addQuestion:16",
         "Description": "Current Lambda function version",
         "ExportName": "sls-quiztopia-api-dev-AddQuestionLambdaFunctionQualifiedArn"
       },
@@ -2647,7 +2647,7 @@
       },
       {
         "OutputKey": "LoginLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-login:14",
+        "OutputValue": "arn:aws:lambda:eu-north-1:797622875139:function:quiztopia-api-dev-login:16",
         "Description": "Current Lambda function version",
         "ExportName": "sls-quiztopia-api-dev-LoginLambdaFunctionQualifiedArn"
       },
@@ -2807,7 +2807,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-              "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+              "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
             },
             "Handler": "src/handlers/auth/signup.handler",
             "Runtime": "nodejs18.x",
@@ -2838,7 +2838,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-              "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+              "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
             },
             "Handler": "src/handlers/auth/login.handler",
             "Runtime": "nodejs18.x",
@@ -2869,7 +2869,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-              "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+              "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
             },
             "Handler": "src/handlers/quiz/getAllQuiz.handler",
             "Runtime": "nodejs18.x",
@@ -2900,7 +2900,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-              "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+              "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
             },
             "Handler": "src/handlers/quiz/createQuiz.handler",
             "Runtime": "nodejs18.x",
@@ -2931,7 +2931,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-              "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+              "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
             },
             "Handler": "src/handlers/quiz/addQuestion.handler",
             "Runtime": "nodejs18.x",
@@ -2962,7 +2962,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-              "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+              "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
             },
             "Handler": "src/handlers/quiz/getByUser.handler",
             "Runtime": "nodejs18.x",
@@ -2993,7 +2993,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-eu-north-1-b067ceac-0dfc",
-              "S3Key": "serverless/quiztopia-api/dev/1759132136409-2025-09-29T07:48:56.409Z/quiztopia-api.zip"
+              "S3Key": "serverless/quiztopia-api/dev/1759135407038-2025-09-29T08:43:27.038Z/quiztopia-api.zip"
             },
             "Handler": "src/handlers/quiz/deleteQuiz.handler",
             "Runtime": "nodejs18.x",
@@ -3019,74 +3019,74 @@
             "DeleteQuizLogGroup"
           ]
         },
-        "SignupLambdaVersionkmquGyU8A1frpd7dorQvGXlnrVLB9sR6KEGCveTIc": {
+        "SignupLambdaVersionI15SUH4otpgJZJyi7FxfpwWiMcgAPkPkwdAkghaPQ": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "SignupLambdaFunction"
             },
-            "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+            "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
           }
         },
-        "LoginLambdaVersionmETxo0Tn3zJcDfNykEWTfIVPwQzUO64YxzzH24nQ39I": {
+        "LoginLambdaVersionFUPyON267Xc0Bb7XpUbC7IbmS9R1ZCQXM0ECAdQZMmo": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "LoginLambdaFunction"
             },
-            "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+            "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
           }
         },
-        "GetAllQuizzesLambdaVersionvX04i9MWiLUWDJFly25A5oE7aEMkUoNKB9BbzaVIlc": {
+        "GetAllQuizzesLambdaVersionilm1unv2rMHdJ85fguEKAtY9ND7ilUxsoeaFcyVGs": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "GetAllQuizzesLambdaFunction"
             },
-            "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+            "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
           }
         },
-        "CreateQuizLambdaVersionYsFh0xswKSeI9TLSVmpvfn83laYfVVMjUOhx0gX71A": {
+        "CreateQuizLambdaVersionW6wqH3l6lZcOIU7GVKxyhmnSdJK3S6BEiPGf8WA4k": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "CreateQuizLambdaFunction"
             },
-            "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+            "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
           }
         },
-        "AddQuestionLambdaVersion8q4ohJpTB8ngst1DsVw9bqaZGPFGiH4kp2IAcJDkQQM": {
+        "AddQuestionLambdaVersionIMOlG4JpRg2SSvNNLdGraB0fTQyvYxsmnFG42I1OhY": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "AddQuestionLambdaFunction"
             },
-            "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+            "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
           }
         },
-        "GetByUserLambdaVersion9I6rlRZM23PtxBONxMBvwaGcNsEmMWC5SA7oMYDbc": {
+        "GetByUserLambdaVersionehMImMwByFOSeh8daJxRWvTLyy0g4NTamN5sl2cbm4": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "GetByUserLambdaFunction"
             },
-            "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+            "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
           }
         },
-        "DeleteQuizLambdaVersiono4QEesD7zsAEf69bBhxXZb8iEANyegICfJ70cITTtk": {
+        "DeleteQuizLambdaVersionSAokATFYHOgsfbXj0roZKcR4TKc2ymshU6hpprru0": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "DeleteQuizLambdaFunction"
             },
-            "CodeSha256": "K1gkOWoO749P6ZTzuW10RJ7w5bRbkzWg5n4o52EG1hs="
+            "CodeSha256": "1j+lcVqhv8l8D2EYirQZeOsbKMu4YLZv2gR0p23s1zY="
           }
         },
         "HttpApi": {
@@ -3710,7 +3710,7 @@
         "SignupLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "SignupLambdaVersionkmquGyU8A1frpd7dorQvGXlnrVLB9sR6KEGCveTIc"
+            "Ref": "SignupLambdaVersionI15SUH4otpgJZJyi7FxfpwWiMcgAPkPkwdAkghaPQ"
           },
           "Export": {
             "Name": "sls-quiztopia-api-dev-SignupLambdaFunctionQualifiedArn"
@@ -3719,7 +3719,7 @@
         "LoginLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "LoginLambdaVersionmETxo0Tn3zJcDfNykEWTfIVPwQzUO64YxzzH24nQ39I"
+            "Ref": "LoginLambdaVersionFUPyON267Xc0Bb7XpUbC7IbmS9R1ZCQXM0ECAdQZMmo"
           },
           "Export": {
             "Name": "sls-quiztopia-api-dev-LoginLambdaFunctionQualifiedArn"
@@ -3728,7 +3728,7 @@
         "GetAllQuizzesLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "GetAllQuizzesLambdaVersionvX04i9MWiLUWDJFly25A5oE7aEMkUoNKB9BbzaVIlc"
+            "Ref": "GetAllQuizzesLambdaVersionilm1unv2rMHdJ85fguEKAtY9ND7ilUxsoeaFcyVGs"
           },
           "Export": {
             "Name": "sls-quiztopia-api-dev-GetAllQuizzesLambdaFunctionQualifiedArn"
@@ -3737,7 +3737,7 @@
         "CreateQuizLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "CreateQuizLambdaVersionYsFh0xswKSeI9TLSVmpvfn83laYfVVMjUOhx0gX71A"
+            "Ref": "CreateQuizLambdaVersionW6wqH3l6lZcOIU7GVKxyhmnSdJK3S6BEiPGf8WA4k"
           },
           "Export": {
             "Name": "sls-quiztopia-api-dev-CreateQuizLambdaFunctionQualifiedArn"
@@ -3746,7 +3746,7 @@
         "AddQuestionLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "AddQuestionLambdaVersion8q4ohJpTB8ngst1DsVw9bqaZGPFGiH4kp2IAcJDkQQM"
+            "Ref": "AddQuestionLambdaVersionIMOlG4JpRg2SSvNNLdGraB0fTQyvYxsmnFG42I1OhY"
           },
           "Export": {
             "Name": "sls-quiztopia-api-dev-AddQuestionLambdaFunctionQualifiedArn"
@@ -3755,7 +3755,7 @@
         "GetByUserLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "GetByUserLambdaVersion9I6rlRZM23PtxBONxMBvwaGcNsEmMWC5SA7oMYDbc"
+            "Ref": "GetByUserLambdaVersionehMImMwByFOSeh8daJxRWvTLyy0g4NTamN5sl2cbm4"
           },
           "Export": {
             "Name": "sls-quiztopia-api-dev-GetByUserLambdaFunctionQualifiedArn"
@@ -3764,7 +3764,7 @@
         "DeleteQuizLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "DeleteQuizLambdaVersiono4QEesD7zsAEf69bBhxXZb8iEANyegICfJ70cITTtk"
+            "Ref": "DeleteQuizLambdaVersionSAokATFYHOgsfbXj0roZKcR4TKc2ymshU6hpprru0"
           },
           "Export": {
             "Name": "sls-quiztopia-api-dev-DeleteQuizLambdaFunctionQualifiedArn"
