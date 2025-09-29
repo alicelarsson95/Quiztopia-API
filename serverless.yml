@@ -91,17 +91,27 @@ resources:
           - AttributeName: username
             KeyType: HASH
 
-    QuizTable:
-      Type: AWS::DynamoDB::Table
-      Properties:
-        TableName: quiz
-        BillingMode: PAY_PER_REQUEST
-        AttributeDefinitions:
-          - AttributeName: quizId
-            AttributeType: S
+  QuizTable:
+  Type: AWS::DynamoDB::Table
+  Properties:
+    TableName: quiz
+    BillingMode: PAY_PER_REQUEST
+    AttributeDefinitions:
+      - AttributeName: quizId
+        AttributeType: S
+      - AttributeName: createdBy
+        AttributeType: S
+    KeySchema:
+      - AttributeName: quizId
+        KeyType: HASH
+    GlobalSecondaryIndexes:
+      - IndexName: CreatedByIndex
         KeySchema:
-          - AttributeName: quizId
+          - AttributeName: createdBy
             KeyType: HASH
+        Projection:
+          ProjectionType: ALL
+
 
     QuestionsTable:
       Type: AWS::DynamoDB::Table
