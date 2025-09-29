@@ -2,9 +2,11 @@ import middy from "@middy/core";
 import bcrypt from "bcryptjs";
 import httpJsonBodyParser from "@middy/http-json-body-parser";
 import validator from "@middy/validator";
-import { transpileSchema } from "@middy/validator/transpile"
-import db from "../utils/db.js"
+import { transpileSchema } from "@middy/validator/transpile";
+import db from "../../utils/db.js";
 import { PutItemCommand } from "@aws-sdk/client-dynamodb";
+import { success, error } from "../../utils/responses.js";
+import { signupSchema } from "../../utils/validationSchemas.js";
 
 const signup = async (event) => {
   const { username, password } = event.body;
@@ -21,47 +23,19 @@ const signup = async (event) => {
     ConditionExpression: "attribute_not_exists(username)",
   });
 
-  // Skicka till DynamoDB
- try {
-    await db.send(createNewUser)
-    return {
-      statusCode: 201,
-      body: JSON.stringify({ message: "User created", username })
+  try {
+    await db.send(createNewUser);
+    return success({ message: "User created", username }, 201);
+  } catch (err) {
+    console.log("Signup error:", err);
+    if (err.name === "ConditionalCheckFailedException") {
+      return error("Username already exists", 409);
     }
-  } catch (error) {
-    console.log("DynamoDB error:", error) 
-
-    if (error.name === "ConditionalCheckFailedException") {
-      return {
-        statusCode: 409,
-        body: JSON.stringify({ error: "Username already exists" })
-      }
-    }
-
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ error: error.message, name: error.name })
-    }
+    return error(err.message, 500);
   }
-}
-
-
-// Schema för validering
-const schema = {
-  type: "object",
-  properties: {
-    body: {
-      type: "object",
-      required: ["username", "password"],
-      properties: {
-        username: { type: "string", minLength: 3 },
-        password: { type: "string", minLength: 6 },
-      },
-    },
-  },
 };
 
 // Exportera handler med middy
 export const handler = middy(signup)
   .use(httpJsonBodyParser())
-  .use(validator({ eventSchema: transpileSchema(schema) }));
+  .use(validator({ eventSchema: transpileSchema(signupSchema) }));
