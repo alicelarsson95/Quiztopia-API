@@ -1,5 +1,6 @@
 org: js2024
 service: quiztopia-api
+
 provider:
   name: aws
   runtime: nodejs18.x
@@ -22,6 +23,7 @@ provider:
           Resource:
             - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/users
             - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/quiz
+            - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/quiz/index/CreatedByIndex
             - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/questions
 
 functions:
@@ -39,7 +41,7 @@ functions:
           method: POST
           path: /auth/login
 
-  getAllQuizzes:
+  getAllQuiz:
     handler: src/handlers/quiz/getAllQuiz.handler
     events:
       - httpApi:
@@ -74,9 +76,6 @@ functions:
           method: DELETE
           path: /quiz/{quizId}
 
-plugins:
-  - serverless-offline
-
 resources:
   Resources:
     UsersTable:
@@ -85,33 +84,41 @@ resources:
         TableName: users
         BillingMode: PAY_PER_REQUEST
         AttributeDefinitions:
+          - AttributeName: userId
+            AttributeType: S
           - AttributeName: username
             AttributeType: S
         KeySchema:
-          - AttributeName: username
+          - AttributeName: userId
             KeyType: HASH
+        GlobalSecondaryIndexes:
+          - IndexName: UsernameIndex
+            KeySchema:
+              - AttributeName: username
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
 
-  QuizTable:
-  Type: AWS::DynamoDB::Table
-  Properties:
-    TableName: quiz
-    BillingMode: PAY_PER_REQUEST
-    AttributeDefinitions:
-      - AttributeName: quizId
-        AttributeType: S
-      - AttributeName: createdBy
-        AttributeType: S
-    KeySchema:
-      - AttributeName: quizId
-        KeyType: HASH
-    GlobalSecondaryIndexes:
-      - IndexName: CreatedByIndex
-        KeySchema:
+    QuizTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: quiz
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: quizId
+            AttributeType: S
           - AttributeName: createdBy
+            AttributeType: S
+        KeySchema:
+          - AttributeName: quizId
             KeyType: HASH
-        Projection:
-          ProjectionType: ALL
-
+        GlobalSecondaryIndexes:
+          - IndexName: CreatedByIndex
+            KeySchema:
+              - AttributeName: createdBy
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
 
     QuestionsTable:
       Type: AWS::DynamoDB::Table
