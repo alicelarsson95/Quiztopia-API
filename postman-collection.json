@@ -1,0 +1,550 @@
+{
+	"info": {
+		"_postman_id": "389153db-b824-4663-9e45-d2069d12d0e2",
+		"name": "Quiztopia",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43237590",
+		"_collection_link": "https://bold-comet-596367.postman.co/workspace/Alice-workspace~8c349ba3-f3ac-4d9e-82fc-c37198d4b448/collection/43237590-389153db-b824-4663-9e45-d2069d12d0e2?action=share&source=collection_link&creator=43237590"
+	},
+	"item": [
+		{
+			"name": "/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"alice95\",\r\n  \"password\": \"secret123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/auth/signup",
+					"protocol": "https",
+					"host": [
+						"dagy6zym70",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "409 conflict",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"username\": \"aliceGirl\",\r\n  \"password\": \"secret123\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/auth/signup",
+							"protocol": "https",
+							"host": [
+								"dagy6zym70",
+								"execute-api",
+								"eu-north-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"status": "Conflict",
+					"code": 409,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Oct 2025 13:10:22 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "35"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "RxM5pin5gi0EMKQ="
+						}
+					],
+					"cookie": [],
+					"body": "{\"error\":\"Username already exists\"}"
+				}
+			]
+		},
+		{
+			"name": "/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"alice95\",\r\n  \"password\": \"secret123\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/auth/login",
+					"protocol": "https",
+					"host": [
+						"dagy6zym70",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/quiz",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhYjA5MjlhMS0xMWIwLTQyNTktODU2ZC02ZWQ2MjdjMjkxMjIiLCJ1c2VybmFtZSI6ImFsaWNlOTUiLCJpYXQiOjE3NTkzMjQzNzIsImV4cCI6MTc1OTM0MjM3Mn0.0AkFQiDKCx_DMUGMCir1QdVFxiAk9inQI6NK-Q9Nz0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Det stora Göteborgsquizzet\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz",
+					"protocol": "https",
+					"host": [
+						"dagy6zym70",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"quiz"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Det stora Göteborgsquizzet\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz",
+							"protocol": "https",
+							"host": [
+								"dagy6zym70",
+								"execute-api",
+								"eu-north-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"quiz"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Oct 2025 13:15:00 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "189"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "RxNlIgwDgi0EPKQ="
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"Quiz created\",\"quizId\":\"59934b81-7142-454c-943c-be4a313e9552\",\"title\":\"Det stora Göteborgsquizzet\",\"createdBy\":\"ab0929a1-11b0-4259-856d-6ed627c29122\",\"createdByName\":\"alice95\"}"
+				}
+			]
+		},
+		{
+			"name": "quiz/question",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhYjA5MjlhMS0xMWIwLTQyNTktODU2ZC02ZWQ2MjdjMjkxMjIiLCJ1c2VybmFtZSI6ImFsaWNlOTUiLCJpYXQiOjE3NTkzMjQzNzIsImV4cCI6MTc1OTM0MjM3Mn0.0AkFQiDKCx_DMUGMCir1QdVFxiAk9inQI6NK-Q9Nz0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"quizId\": \"59934b81-7142-454c-943c-be4a313e9552\",\r\n  \"question\": \"Vart i Göteborg kan du se pingviner?\",\r\n  \"answer\": \"Slottskogen\",\r\n  \"lat\": \"57.7089\",\r\n  \"long\": \"11.9746\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz/question",
+					"protocol": "https",
+					"host": [
+						"dagy6zym70",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"question"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"quizId\": \"59934b81-7142-454c-943c-be4a313e9552\",\r\n  \"question\": \"Vart i Göteborg kan du se pingviner?\",\r\n  \"answer\": \"Slottskogen\",\r\n  \"lat\": \"57.7089\",\r\n  \"long\": \"11.9746\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz/question",
+							"protocol": "https",
+							"host": [
+								"dagy6zym70",
+								"execute-api",
+								"eu-north-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"quiz",
+								"question"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Oct 2025 13:16:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "235"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "RxN3ljQ0Ai0EMsA="
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"Question added\",\"quizId\":\"59934b81-7142-454c-943c-be4a313e9552\",\"questionId\":\"712e1dc1-265b-40d0-9567-f6a84ae36196\",\"question\":\"Vart i Göteborg kan du se pingviner?\",\"answer\":\"Slottskogen\",\"lat\":\"57.7089\",\"long\":\"11.9746\"}"
+				}
+			]
+		},
+		{
+			"name": "/quiz",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz",
+					"protocol": "https",
+					"host": [
+						"dagy6zym70",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"quiz"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz",
+							"protocol": "https",
+							"host": [
+								"dagy6zym70",
+								"execute-api",
+								"eu-north-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"quiz"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Oct 2025 13:24:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "325"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "RxO9bhU6Ai0EPXg="
+						}
+					],
+					"cookie": [],
+					"body": "[{\"quizId\":\"59934b81-7142-454c-943c-be4a313e9552\",\"title\":\"Det stora Göteborgsquizzet\",\"createdBy\":\"ab0929a1-11b0-4259-856d-6ed627c29122\",\"createdByName\":\"alice95\"},{\"quizId\":\"25b0034f-3d31-44ee-ab88-824dc83576b4\",\"title\":\"Det stora djurquizzet\",\"createdBy\":\"ab0929a1-11b0-4259-856d-6ed627c29122\",\"createdByName\":\"alice95\"}]"
+				}
+			]
+		},
+		{
+			"name": "/userId/quizId",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz/ab0929a1-11b0-4259-856d-6ed627c29122/25b0034f-3d31-44ee-ab88-824dc83576b4",
+							"protocol": "https",
+							"host": [
+								"dagy6zym70",
+								"execute-api",
+								"eu-north-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"quiz",
+								"ab0929a1-11b0-4259-856d-6ed627c29122",
+								"25b0034f-3d31-44ee-ab88-824dc83576b4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Oct 2025 13:26:07 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "RxPNaiJjAi0EPVA="
+						}
+					],
+					"cookie": [],
+					"body": "{\"success\":true,\"quiz\":{\"quizId\":\"25b0034f-3d31-44ee-ab88-824dc83576b4\",\"title\":\"Det stora djurquizzet\",\"userId\":\"ab0929a1-11b0-4259-856d-6ed627c29122\",\"questions\":[{\"question\":\"Vart finner du sälar i Göteborg?\",\"answer\":\"Slottsskogen\",\"location\":{\"longitude\":\"18.9746\",\"latitude\":\"54.7089\"}}]}}"
+				}
+			]
+		},
+		{
+			"name": "/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJhYjA5MjlhMS0xMWIwLTQyNTktODU2ZC02ZWQ2MjdjMjkxMjIiLCJ1c2VybmFtZSI6ImFsaWNlOTUiLCJpYXQiOjE3NTkzMjQzNzIsImV4cCI6MTc1OTM0MjM3Mn0.0AkFQiDKCx_DMUGMCir1QdVFxiAk9inQI6NK-Q9Nz0w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz/cd6174a0-1267-4cf7-8017-a165fe7c816b",
+					"protocol": "https",
+					"host": [
+						"dagy6zym70",
+						"execute-api",
+						"eu-north-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"quiz",
+						"cd6174a0-1267-4cf7-8017-a165fe7c816b"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "200 OK",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://dagy6zym70.execute-api.eu-north-1.amazonaws.com/quiz/cd6174a0-1267-4cf7-8017-a165fe7c816b",
+							"protocol": "https",
+							"host": [
+								"dagy6zym70",
+								"execute-api",
+								"eu-north-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"quiz",
+								"cd6174a0-1267-4cf7-8017-a165fe7c816b"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 01 Oct 2025 13:28:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Apigw-Requestid",
+							"value": "RxPiFju0Ai0EJyw="
+						}
+					],
+					"cookie": [],
+					"body": "{\"message\":\"Quiz and related questions deleted\"}"
+				}
+			]
+		}
+	]
+}
