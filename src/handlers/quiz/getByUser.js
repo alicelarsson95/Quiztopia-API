@@ -7,13 +7,13 @@ import { authMiddleware } from "../../middleware/authMiddleware.js";
 const getByUser = async (event) => {
   const { userId, quizId } = event.pathParameters;
 
-  // säkerställ att det är rätt användare
-  if (event.user.username !== userId) {
-    return error("Forbidden", 403);
-  }
+ 
+  if (event.user.userId !== userId) {
+  return error("Forbidden", 403);
+}
 
   try {
-    // hämta quizet
+   
     const quizCmd = new GetItemCommand({
       TableName: process.env.QUIZ_TABLE,
       Key: { quizId: { S: quizId } },
@@ -21,7 +21,7 @@ const getByUser = async (event) => {
     const quizResult = await db.send(quizCmd);
     if (!quizResult.Item) return error("Quiz not found", 404);
 
-    // hämta alla frågor till quizet
+ 
     const questionsCmd = new QueryCommand({
       TableName: process.env.QUESTIONS_TABLE,
       KeyConditionExpression: "quizId = :q",
@@ -38,7 +38,7 @@ const getByUser = async (event) => {
       },
     }));
 
-    // returnera i rätt format
+  
     return success({
       success: true,
       quiz: {
@@ -54,4 +54,5 @@ const getByUser = async (event) => {
   }
 };
 
-export const handler = middy(getByUser).use(authMiddleware());
+export const handler = middy(getByUser)
+.use(authMiddleware());

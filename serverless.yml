@@ -22,8 +22,10 @@ provider:
             - dynamodb:Query
           Resource:
             - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/users
+            - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/users/index/UsernameIndex
             - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/quiz
             - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/quiz/index/CreatedByIndex
+            - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/quiz/index/TypeIndex
             - arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/questions
 
 functions:
@@ -109,6 +111,8 @@ resources:
             AttributeType: S
           - AttributeName: createdBy
             AttributeType: S
+          - AttributeName: type
+            AttributeType: S
         KeySchema:
           - AttributeName: quizId
             KeyType: HASH
@@ -116,6 +120,12 @@ resources:
           - IndexName: CreatedByIndex
             KeySchema:
               - AttributeName: createdBy
+                KeyType: HASH
+            Projection:
+              ProjectionType: ALL
+          - IndexName: TypeIndex
+            KeySchema:
+              - AttributeName: type
                 KeyType: HASH
             Projection:
               ProjectionType: ALL

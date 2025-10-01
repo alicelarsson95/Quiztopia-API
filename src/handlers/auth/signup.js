@@ -12,7 +12,23 @@ import { signupSchema } from "../../utils/validationSchemas.js";
 const signup = async (event) => {
   const { username, password } = event.body;
 
-  const userId = uuidv4()
+  // kolla först om username redan finns (via GSI)
+  const checkUser = new QueryCommand({
+    TableName: process.env.USERS_TABLE,
+    IndexName: "UsernameIndex", // måste finnas i YML
+    KeyConditionExpression: "username = :u",
+    ExpressionAttributeValues: {
+      ":u": { S: username },
+    },
+  });
+
+  const checkResult = await db.send(checkUser);
+  if (checkResult.Count > 0) {
+    return error("Username already exists", 409);
+  }
+
+  // skapa user
+  const userId = uuidv4();
   const passwordHash = await bcrypt.hash(password, 10);
 
   const createNewUser = new PutItemCommand({
@@ -22,22 +38,17 @@ const signup = async (event) => {
       username: { S: username },
       passwordHash: { S: passwordHash },
     },
-    ConditionExpression: "attribute_not_exists(username)",
   });
 
   try {
     await db.send(createNewUser);
-    return success({ message: "User created", username }, 201);
+    return success({ message: "User created", userId, username }, 201);
   } catch (err) {
     console.log("Signup error:", err);
-    if (err.name === "ConditionalCheckFailedException") {
-      return error("Username already exists", 409);
-    }
     return error(err.message, 500);
   }
 };
 
-// Exportera handler med middy
 export const handler = middy(signup)
   .use(httpJsonBodyParser())
   .use(validator({ eventSchema: transpileSchema(signupSchema) }));

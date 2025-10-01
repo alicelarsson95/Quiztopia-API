@@ -7,32 +7,38 @@ import { authMiddleware } from "../../middleware/authMiddleware.js"
 import { success, error } from "../../utils/responses.js"
 
 const createQuiz = async (event) => {
-  const { username } = event.user  
   const { title } = event.body
 
   if (!title) {
     return error("Title is required", 400)
   }
 
-  const quizId = uuidv4()  
+  const quizId = uuidv4()
+  const user = event.user 
 
-  const createQuizItem = new PutItemCommand({
-    TableName: process.env.QUIZ_TABLE,  
+  const newQuiz = new PutItemCommand({
+    TableName: process.env.QUIZ_TABLE,
     Item: {
       quizId: { S: quizId },
       title: { S: title },
-      createdBy: { S: username },
+      createdBy: { S: user.userId },   
+      createdByName: { S: user.username }, 
+      type: { S: "QUIZ" },            
     },
   })
 
   try {
-    await db.send(createQuizItem)
-    return success({ 
-      message: "Quiz created", 
-      quizId, 
-      title, 
-      createdBy: username 
-    }, 201)
+    await db.send(newQuiz)
+    return success(
+      {
+        message: "Quiz created",
+        quizId,
+        title,
+        createdBy: user.userId,
+        createdByName: user.username,
+      },
+      201
+    )
   } catch (err) {
     console.log("CreateQuiz error:", err)
     return error("Could not create quiz", 500)

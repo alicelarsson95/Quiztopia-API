@@ -1,6 +1,6 @@
 import middy from "@middy/core";
 import httpJsonBodyParser from "@middy/http-json-body-parser";
-import { PutItemCommand } from "@aws-sdk/client-dynamodb";
+import { PutItemCommand, GetItemCommand } from "@aws-sdk/client-dynamodb";
 import { v4 as uuidv4 } from "uuid";
 import db from "../../utils/db.js";
 import { authMiddleware } from "../../middleware/authMiddleware.js";
@@ -13,22 +13,41 @@ const addQuestion = async (event) => {
     return error("All fields are required", 400);
   }
 
-  const questionId = uuidv4();
-
-  const createQuestionItem = new PutItemCommand({
-    TableName: process.env.QUESTIONS_TABLE,
-    Item: {
-      quizId: { S: quizId },
-      questionId: { S: questionId },
-      question: { S: question },
-      answer: { S: answer },
-      lat: { S: lat },
-      long: { S: long },
-    },
-  });
-
   try {
+   
+    const quizCheck = new GetItemCommand({
+      TableName: process.env.QUIZ_TABLE,
+      Key: { quizId: { S: quizId } },
+    });
+
+    const quizResult = await db.send(quizCheck);
+
+    if (!quizResult.Item) {
+      return error("Quiz not found", 404);
+    }
+
+    
+    if (quizResult.Item.createdBy.S !== event.user.userId) {
+      return error("Forbidden: You do not own this quiz", 403);
+    }
+
+ 
+    const questionId = uuidv4();
+
+    const createQuestionItem = new PutItemCommand({
+      TableName: process.env.QUESTIONS_TABLE,
+      Item: {
+        quizId: { S: quizId },
+        questionId: { S: questionId },
+        question: { S: question },
+        answer: { S: answer },
+        lat: { S: lat },
+        long: { S: long },
+      },
+    });
+
     await db.send(createQuestionItem);
+
     return success(
       {
         message: "Question added",
