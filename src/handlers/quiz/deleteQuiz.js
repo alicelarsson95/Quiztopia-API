@@ -1,8 +1,11 @@
 import middy from "@middy/core";
+import validator from "@middy/validator";
+import { transpileSchema } from "@middy/validator/transpile";
 import { DeleteItemCommand, GetItemCommand, QueryCommand } from "@aws-sdk/client-dynamodb";
 import db from "../../utils/db.js";
 import { authMiddleware } from "../../middleware/authMiddleware.js";
 import { success, error } from "../../utils/responses.js";
+import { deleteQuizSchema } from "../../utils/validationSchemas.js";
 
 const deleteQuiz = async (event) => {
   const { quizId } = event.pathParameters;
@@ -12,7 +15,6 @@ const deleteQuiz = async (event) => {
       TableName: process.env.QUIZ_TABLE,
       Key: { quizId: { S: quizId } },
     });
-
     const quizResult = await db.send(quizCheck);
 
     if (!quizResult.Item) {
@@ -54,9 +56,11 @@ const deleteQuiz = async (event) => {
 
     return success({ message: "Quiz and related questions deleted" });
   } catch (err) {
-    console.log("DeleteQuiz error:", err);
+    console.error("DeleteQuiz error:", err);
     return error("Could not delete quiz", 500);
   }
 };
 
-export const handler = middy(deleteQuiz).use(authMiddleware());
+export const handler = middy(deleteQuiz)
+  .use(authMiddleware())
+  .use(validator({ eventSchema: transpileSchema(deleteQuizSchema) }));

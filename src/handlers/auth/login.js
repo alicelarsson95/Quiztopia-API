@@ -12,7 +12,6 @@ import { signToken } from "../../utils/jwt.js";
 const login = async (event) => {
   const { username, password } = event.body;
 
-  // hämta användaren via UsernameIndex
   const queryUser = new QueryCommand({
     TableName: process.env.USERS_TABLE,
     IndexName: "UsernameIndex",
@@ -35,7 +34,6 @@ const login = async (event) => {
     return error("Invalid username or password", 401);
   }
 
-  // skapa JWT
   const token = signToken({
     userId: user.userId.S,
     username: user.username.S,
